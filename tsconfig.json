@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "paths": {
+      "@utils/*": ["./src/utils/*"],
+      "@_types/*": ["./src/types/*"],
+      "@apps/*": ["./src/apps/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "node_modules/@webgpu/**/*" ],
+  "exclude": ["src/**/*.glsl"]
+}

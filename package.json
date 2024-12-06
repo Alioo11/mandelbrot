@@ -1,0 +1,48 @@
+{
+  "name": "webgl-ts-project",
+  "version": "1.0.0",
+  "description": "A WebGL project with TypeScript and Webpack, including shader utilities.",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "keywords": [
+    "WebGL",
+    "TypeScript",
+    "Shaders",
+    "Webpack"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/html2canvas": "^1.0.0",
+    "@types/node": "^22.9.1",
+    "eslint": "^8.49.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "glsl-shader-loader": "*",
+    "html-webpack-plugin": "^5.5.0",
+    "raw-loader": "^4.0.2",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.4.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.0",
+    "webpack-merge": "^5.9.0"
+  },
+  "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.12.10",
+    "@popperjs/core": "^2.11.8",
+    "@types/bootstrap": "^5.2.10",
+    "@types/jquery": "^3.5.32",
+    "@webgpu/types": "^0.1.51",
+    "bootstrap": "^5.3.3",
+    "css-loader": "^7.1.2",
+    "ffmpeg.js": "^4.2.9003",
+    "gl-matrix": "^3.4.3",
+    "html2canvas": "^1.4.1",
+    "jquery": "^3.7.1",
+    "js-big-decimal": "^2.1.0",
+    "style-loader": "^4.0.0"
+  }
+}

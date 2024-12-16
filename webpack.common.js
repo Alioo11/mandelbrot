@@ -14,6 +14,7 @@ module.exports = {
       "@utils": path.resolve(__dirname, "./src/utils"),
       "@_types": path.resolve(__dirname, "./src/types"),
       "@apps": path.resolve(__dirname, "./src/apps"),
+      "@shaders": path.resolve(__dirname, "./src/shaders"),
     },
   },
   module: {

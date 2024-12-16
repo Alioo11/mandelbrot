@@ -12,7 +12,8 @@
     "paths": {
       "@utils/*": ["./src/utils/*"],
       "@_types/*": ["./src/types/*"],
-      "@apps/*": ["./src/apps/*"]
+      "@apps/*": ["./src/apps/*"],
+      "@shaders/*": ["./src/shaders/*"]
     }
   },
   "include": ["src/**/*.ts", "node_modules/@webgpu/**/*" ],

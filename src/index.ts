@@ -4,8 +4,7 @@ import fragmentShaderSrc from "@shaders/fragment.glsl";
 import vertexShaderSrc from "@shaders/vertex.glsl";
 import createCanvas from "@utils/initCanvas";
 import { createProgram } from "@utils/shaderLoader";
-
-const ZOOM_LIMIT = [0.1 , 10];
+import NavigationHelper from "./helpers/Navigation";
 
 const viewScreenCoordinates = new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]);
 
@@ -23,41 +22,7 @@ const main = () => {
   const program = createProgram(gl, vertexShaderSrc, fragmentShaderSrc);
   gl.useProgram(program);
 
-  let zoom = 1;
-  let center = [0, 0];
-  let prevCenter = [0, 0];
-  let isPanning = false;
-
-  window.addEventListener("mousedown", (e) => {
-    isPanning = true;
-    prevCenter = [e.clientX, e.clientY];
-  });
-  window.addEventListener("mouseup", () => (isPanning = false));
-  canvas.addEventListener("mousemove", (e) => {
-    if (!isPanning) return;
-    const newX = e.clientX;
-    const newY = e.clientY;
-
-    const DX = newX - prevCenter[0];
-    const DY = newY - prevCenter[1];
-
-    const XC = DX / 1000 * zoom;
-    const YC = DY / 1000 * zoom;
-
-    center[0] += XC;
-    center[1] -= YC;
-
-    prevCenter = [newX, newY];
-  });
-
-  canvas.addEventListener('wheel', (e)=>{
-    const zoomFactor = Math.exp(e.deltaY * 0.003);
-    const newZoom = zoom * zoomFactor;
-
-    // const [min_zoom , max_zoom] = ZOOM_LIMIT;
-    // if (newZoom > max_zoom || newZoom < min_zoom) return;
-    zoom = newZoom;
-  });
+  const navigation = new NavigationHelper(canvas);
 
   const nowForNow = new Date().getTime();
 
@@ -73,8 +38,8 @@ const main = () => {
     const timeUniform = gl.getUniformLocation(program, "time");
 
     gl.uniform2f(resolutionUniform, WIDTH, HEIGHT);
-    gl.uniform2f(centerUniform, center[0], center[1]);
-    gl.uniform1f(zoomUniform, zoom);
+    gl.uniform2f(centerUniform, navigation.center[0], navigation.center[1]);
+    gl.uniform1f(zoomUniform, navigation.zoom);
     gl.uniform1f(timeUniform, new Date().getTime() - nowForNow);
 
     const buffer = gl.createBuffer();

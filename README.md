@@ -1,0 +1,38 @@
+# Mandelbrot Visualizer
+
+A high-performance Mandelbrot Set visualizer built using **TypeScript**, **Webpack**, **GLSL**, and **WebGL**. Explore the fascinating world of fractals with smooth zooming and customizable parameters!
+
+## 🌐 Live Demo
+Check out the live version here: [YourDomain.com](https://YourDomain.com)
+
+## 🚀 Features
+- **Real-time Rendering**: Leveraging WebGL for smooth and efficient fractal rendering.
+- **Customizable Precision**: Optimized GLSL shaders for exploring deep zoom levels.
+- **Interactive Controls**: Pan, zoom, and adjust rendering parameters dynamically.
+- **Modern Development Stack**: Built with TypeScript and Webpack for maintainability and scalability.
+
+## 📸 Screenshots
+![Screenshot 1](path/to/screenshot1.png)
+![Screenshot 2](path/to/screenshot2.png)
+
+## 🛠️ Getting Started
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YourUsername/Mandelbrot-Visualizer.git
+   cd Mandelbrot-Visualizer
+   npm install
+   npm run dev
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the Dev server:
+   ```bash
+   npm run dev
+   ```

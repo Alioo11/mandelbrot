@@ -7,7 +7,7 @@ uniform float zoom;
 uniform float time;
 
 float ut = mod(time / 40.0, 1000.0);
-const float MAX_ITERATIONS = 100.0;
+const float MAX_ITERATIONS = 200.0;
 
 
 vec4 gradientColor(float gradient) {

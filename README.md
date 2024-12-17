@@ -3,7 +3,7 @@
 A high-performance Mandelbrot Set visualizer built using **TypeScript**, **Webpack**, **GLSL**, and **WebGL**. Explore the fascinating world of fractals with smooth zooming and customizable parameters!
 
 ## 🌐 Live Demo
-Check out the live version here: [YourDomain.com](https://YourDomain.com)
+Check out the live version here: [mandelbrot](https://mandelbrot.darkube.app/)
 
 ## 🚀 Features
 - **Real-time Rendering**: Leveraging WebGL for smooth and efficient fractal rendering.

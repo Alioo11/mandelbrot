@@ -4,7 +4,7 @@
 A high-performance Mandelbrot Set visualizer built using **TypeScript**, **Webpack**, **GLSL**, and **WebGL**. Explore the fascinating world of fractals with smooth zooming and customizable parameters!
 
 ## 🌐 Live Demo
-Check out the live version here: [YourDomain.com](https://YourDomain.com)
+Check out the live version here: [mandelbrot](mandelbrot.darkube.app)
 
 ## 🚀 Features
 - **Real-time Rendering**: Leveraging WebGL for smooth and efficient fractal rendering.
@@ -58,9 +58,6 @@ Modify shader parameters in the GLSL files located in `src/shaders/`. These incl
 ## 🤝 Contributions
 Contributions, issues, and feature requests are welcome! Feel free to check out the [issues page](https://github.com/YourUsername/Mandelbrot-Visualizer/issues).
 
-## 📜 License
-This project is licensed under the [MIT License](LICENSE).
-
 ## ⭐ Acknowledgments
 - **[WebGL](https://www.khronos.org/webgl/)**: For enabling GPU-powered graphics in the browser.
 - **[GLSL](https://www.opengl.org/documentation/glsl/)**: For creating custom shaders.
@@ -68,4 +65,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/Alioo11)
+Made with ❤️ by [Ali](https://github.com/Alioo11)

@@ -8,13 +8,13 @@ import NavigationHelper from "./helpers/Navigation";
 
 const viewScreenCoordinates = new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]);
 
-const WIDTH = window.innerWidth - 50;
-const HEIGHT = window.innerHeight - 50;
+const WIDTH = window.innerWidth - 10;
+const HEIGHT = window.innerHeight - 10;
 
 const main = async () => {
   const canvas = createCanvas(WIDTH, HEIGHT);
   document.body.style.backgroundColor = "black";
-  document.body.style.margin = "0px";
+  document.body.style.margin = "5px";
   document.body.style.display = 'flex'
   document.body.style.justifyContent = 'center'
   document.body.style.alignItems = 'center'

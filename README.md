@@ -23,8 +23,8 @@ Check out the live version here: [mandelbrot](https://mandelbrot.darkube.app/)
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/Mandelbrot-Visualizer.git
-   cd Mandelbrot-Visualizer
+   git clone https://github.com/Alioo11/mandelbrot.git
+   cd mandelbrot
    ```
 2. Install dependencies:
    ```bash

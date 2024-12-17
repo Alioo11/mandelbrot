@@ -25,8 +25,6 @@ Check out the live version here: [mandelbrot](https://mandelbrot.darkube.app/)
    ```bash
    git clone https://github.com/YourUsername/Mandelbrot-Visualizer.git
    cd Mandelbrot-Visualizer
-   npm install
-   npm run dev
    ```
 2. Install dependencies:
    ```bash

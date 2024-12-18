@@ -10,8 +10,8 @@ Check out the live version here: [mandelbrot](mandelbrot.darkube.app)
 - **Real-time Rendering**: Leveraging WebGL for smooth and efficient fractal rendering.
 
 ## 📸 Screenshots
-![Screenshot-1](/public//screenshot-01.jpeg)
-![Screenshot-2](/public//screenshot-02.jpeg)
+![Screenshot-1](/public/screenshot-01.jpeg)
+![Screenshot-2](/public/screenshot-02.jpeg)
 
 ## 🛠️ Getting Started
 ### Prerequisites

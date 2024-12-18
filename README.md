@@ -10,8 +10,8 @@ Check out the live version here: [mandelbrot](mandelbrot.darkube.app)
 - **Real-time Rendering**: Leveraging WebGL for smooth and efficient fractal rendering.
 
 ## 📸 Screenshots
-![Screenshot 1](path/to/screenshot1.png)
-![Screenshot 2](path/to/screenshot2.png)
+![Screenshot-1](/public//screenshot-01.jpeg)
+![Screenshot-2](/public//screenshot-02.jpeg)
 
 ## 🛠️ Getting Started
 ### Prerequisites
@@ -55,8 +55,8 @@ Modify shader parameters in the GLSL files located in `src/shaders/`. These incl
 - **WebGL**: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) | [Official WebGL Documentation](https://www.khronos.org/webgl/)
 - **GLSL (OpenGL Shading Language)**: [GLSL Overview](https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)) | [Tutorial](https://thebookofshaders.com/)
 
-## 🤝 Contributions
-Contributions, issues, and feature requests are welcome! Feel free to check out the [issues page](https://github.com/YourUsername/Mandelbrot-Visualizer/issues).
+<!-- ## 🤝 Contributions
+Contributions, issues, and feature requests are welcome! Feel free to check out the [issues page](https://github.com/YourUsername/Mandelbrot-Visualizer/issues). -->
 
 ## ⭐ Acknowledgments
 - **[WebGL](https://www.khronos.org/webgl/)**: For enabling GPU-powered graphics in the browser.

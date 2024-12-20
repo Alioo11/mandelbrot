@@ -1,7 +1,5 @@
 import { vec2 } from "gl-matrix";
 import { easePoly } from "d3-ease";
-import debounce from "@utils/debounce";
-import throttle from "@utils/throttel";
 
 const ZOOM_LIMIT = [0.00005, 3];
 const CENTER_BOUND = [-2, 2];
@@ -139,15 +137,11 @@ class NavigationHelper {
     const dist = Math.sqrt(DX ** 2 + DY ** 2);
 
     const deltaY = (prevTouchDistance - dist);
-
-    const zoomFactor = Math.exp(deltaY * 0.001);
-    const newZoom = this._zoom * zoomFactor;
+    const zoomSpeed = 0.005;
     const [min_zoom, max_zoom] = ZOOM_LIMIT;
-
-    if (newZoom > max_zoom) return (this._zoom = max_zoom);
-    if (newZoom < min_zoom) return (this._zoom = min_zoom);
-
-    this._zoom = newZoom;
+    this._zoom *= 1 + deltaY * zoomSpeed;
+    this._zoom = Math.min(Math.max(this._zoom, min_zoom), max_zoom);
+    this._prevTouchDistance = dist;
   }
 
   private _registerMouseMoveEvents() {
@@ -157,7 +151,6 @@ class NavigationHelper {
       const [firstTouch, secondTouch] = e.touches;
 
       if (firstTouch && secondTouch && this._prevTouchDistance) {
-
         this._touchZoom(firstTouch , secondTouch, this._prevTouchDistance)
       } else {
         this._moveEvent(firstTouch.clientX, firstTouch.clientY);

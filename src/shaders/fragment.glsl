@@ -1,6 +1,8 @@
 precision mediump float;
 precision highp float;
 
+uniform sampler2D u_texture;
+
 uniform vec2 resolution;
 uniform vec2 center;
 uniform float zoom;

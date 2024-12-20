@@ -39,7 +39,19 @@ vec4 gradientColor(float gradient) {
     }
 }
 
+float mapValue(float x) {
+    float x1 = 0.0005;
+    float y1 = 200.0;
+    float x2 = 3.0;
+    float y2 = 20.0;
 
+    // Calculate the slope (A) and intercept (B)
+    float A = (y2 - y1) / (log(x2) - log(x1));
+    float B = y1 - A * log(x1);
+
+    // Apply the mapping
+    return A * log(x) + B;
+}
 
 float mandelbrot(vec2 uv) {
     vec2 c = zoom * uv - center;
@@ -48,6 +60,7 @@ float mandelbrot(vec2 uv) {
     float overflow = 0.0;
     float iter = 0.0;
     for(float i = 0.0; i < MAX_ITERATIONS; i++) {
+        if(i > mapValue(zoom)) break;
         z = vec2(z.x * z.x - z.y * z.y, 2.0 * z.x * z.y) + c;
         if(dot(z, z) > 4.0) return 1.0 -  sqrt(i / MAX_ITERATIONS);
             
